@@ -38,7 +38,7 @@ const Projects = () => {
         },
     ]
     return (
-        <section className="flex flex-col gap-6 px-12 py-4 min-h-screen">
+        <section className="flex flex-col gap-6 px-12 py-4 min-h-screen mt-12">
             <h2 className="text-2xl font-bold text-center">Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {projectDetails.map((project) => <Card key={project.title} title={project.title} imgSrc={project.imgSrc} description={project.description} liveLink={project.liveLink} repoLink={project.repoLink} technologies={project.technologies} />)}

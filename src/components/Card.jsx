@@ -3,7 +3,7 @@ import Icons from "./Icons";
 
 const Card = ({ imgSrc, title, description, liveLink, repoLink, technologies }) => {
     return (
-        <div className="px-4 py-4 grid md:grid-cols-card gap-3  backdrop-blur-3xl border-2 blur-l rounded-2xl relative items-center">
+        <div className="px-4 py-4  grid md:grid-cols-card md:gap-8  backdrop-blur-3xl border-2 blur-l rounded-2xl relative items-center">
             <div className="flex flex-col justify-around gap-2 h-full items-center">
                 {imgSrc ? <img src={imgSrc} className="w-32 rounded-xl border-black" /> : <div className="text-3xl">{'{ }'}</div>}
                 <h2 className="font-bold text-lg">{title}</h2>
