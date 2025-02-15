@@ -25,8 +25,8 @@ const Experience = () => {
             }
         ]
     return (
-        <section className="self-center flex items-center flex-col">
-            <h2 className="text-2xl font-bold text-center py-12">Experience</h2>
+        <section className="self-center flex items-center flex-col mt-12">
+            <h2 className="text-2xl font-bold text-center">Experience</h2>
             <Chrono
                 items={items}
                 scrollable={true}

@@ -18,7 +18,7 @@ const Card = ({ imgSrc, title, description, liveLink, repoLink, technologies }) 
                 }
                 <div className="flex gap-2 flex-row">
                     <Button link={liveLink} buttonType={"live"} />
-                    <Button link={repoLink} buttonType={""} />
+                    <Button link={repoLink} buttonType={"github"} />
                 </div>
             </div>
         </div>
