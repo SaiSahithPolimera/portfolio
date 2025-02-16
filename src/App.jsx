@@ -15,6 +15,14 @@ const App = () => {
     const index = options.indexOf(option);
     if (parallaxRef.current) {
       if (window.innerWidth < 768) {
+        if(index > 1) {
+          parallaxRef.current.scrollTo(index * 0.5);
+        }
+        else {
+          parallaxRef.current.scrollTo(index);
+        }
+      }
+      if (window.innerWidth < 680) {
         if(index >= 2) {
           parallaxRef.current.scrollTo(index + 1);
         }
@@ -28,9 +36,9 @@ const App = () => {
     }
   };
   return (
-    <section className="absolute inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(105%_105%_at_50%_10%,#fff_40%,#63e_100%)] grid grid-rows-home justify-center items-center">
+    <section className="absolute inset-0 -z-10 min-h-screen bg-white [background:radial-gradient(105%_105%_at_50%_10%,#fff_40%,#63e_100%)] grid grid-rows-home justify-center items-center">
       <Navbar options={options} selection={selection} setSelection={handleNavClick} />
-      <Parallax ref={parallaxRef} pages={window.innerWidth < 768 ? 5 : 4}>
+      <Parallax ref={parallaxRef} pages={window.innerWidth < 680 ? 4.9 : window.innerWidth < 768 ? 5 : 4} className="w-full">
         <ParallaxLayer offset={0} >
           <Home />
           <Projects />

@@ -27,6 +27,7 @@ const Experience = () => {
     return (
         <section className="self-center flex items-center flex-col mt-12">
             <h2 className="text-2xl font-bold text-center">Experience</h2>
+            <div className="md:ml-0 -ml-12 p-4">
             <Chrono
                 items={items}
                 scrollable={true}
@@ -46,7 +47,8 @@ const Experience = () => {
                         secondary: 'black',
                     }
                 }
-            />
+                />
+                </div>
         </section>
     );
 };
