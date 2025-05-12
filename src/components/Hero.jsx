@@ -1,9 +1,24 @@
+import BlurText from "./BlurText";
+
 const Hero = () => {
     return (
-        <section className="mb-16 opacity-0 animate-fly-in">
-            <h1 className="text-black md:text-5xl text-4xl font-extrabold text-center ">Hello This is Sahith</h1>
-            <p className="opacity-85 text-black md:text-lg font-medium text-center ">I like building things for web</p>
-        </section>
+        <div className="flex items-center justify-center flex-col gap-3">
+            <BlurText
+
+                text="Hello, This is Sahith"
+
+                delay={150}
+
+                animateBy="words"
+
+                direction="top"
+
+
+                className="md:text-6xl text-4xl mb-8 font-bold font-sans  "
+
+            />
+            <BlurText className="opacity-85 font-mono text-white font-medium text-center md:text-3xl" direction="bottom" text="I like building things for web" />
+        </div>
     )
 }
 

@@ -2,22 +2,22 @@ import blogImage from "../assets/blogAdmin.png";
 import fileNestImage from "../assets/fileNest.png";
 import pyMessengerImage from "../assets/pyMessenger.png";
 import Card from "../components/Card";
+
 const Projects = () => {
     const projectDetails = [
         {
             imgSrc: blogImage,
-            title: "Blog CMS",
-            description: `This is a CMS for my personal blog. This tool is developed with react and tailwind and powered by 
-                          a self-coded RESTful blog written in Express.`,
+            title: "Console log blog",
+            description: `A full-stack blog application that features interactions such as liking and commenting on posts, with tag-based filtering for content discovery. 
+                Optimized application performance by implementing caching for blog data, reducing redundant API calls and improving load times `,
             technologies: ["react", "tailwind"],
-            liveLink: "https://console-log-admin.vercel.app",
-            repoLink: "https://github.com/SaiSahithPolimera/console-log-admin"
+            liveLink: "https://console-log-blog.vercel.app",
+            repoLink: "https://github.com/SaiSahithPolimera/console-log-client"
         },
         {
             imgSrc: fileNestImage,
             title: "File Nest",
-            description: `File nest is a minimal personal storage service. It allows users to share the media and 
-            documents with others by allowing them to create time-limited links with a maximum period of 7 days.`,
+            description: `A full stack file management system similar to Google Drive that features user-controlled uploads with access links for file sharing, allowing the generation of access links with customizable expiration periods of up to 7 days. `,
             technologies: ["node", "express", "postgres", "prisma", "supabase"],
             liveLink: "https://file-nest.onrender.com",
             repoLink: "https://github.com/SaiSahithPolimera/File-Nest"
@@ -38,9 +38,9 @@ const Projects = () => {
         },
     ]
     return (
-        <section className="flex flex-col gap-6 px-12 py-4 min-h-screen mt-24">
+        <section id="projects" className="flex flex-col gap-6 min-h-screen p-8">
             <h2 className="text-2xl font-bold text-center">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
                 {projectDetails.map((project) => <Card key={project.title} title={project.title} imgSrc={project.imgSrc} description={project.description} liveLink={project.liveLink} repoLink={project.repoLink} technologies={project.technologies} />)}
             </div>
         </section>

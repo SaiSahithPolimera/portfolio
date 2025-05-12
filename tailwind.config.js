@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        'home': '0.1fr 1fr',
+      },
+      gridTemplateColumns: {
+        'card': '1fr 3fr',
+      },
       keyframes: {
         "fade-in-bouncedown": {
           "0%": {
@@ -23,43 +29,13 @@ export default {
           "100%": {
             opacity: 1,
             transform: "translate3d(0, 0, 0)",
-          },
-        },
-        "fly-in": {
-          "0%": {
-            opacity: "0",
-            transform: "scale3d(0.3, 0.3, 0.3)",
-            transitionTimingFunction: "cubic-bezier(0.215, 0.61, 0.355, 1)",
-          },
-          "20%": {
-            transform: "scale3d(1.1, 1.1, 1.1)"
-          },
-          "40%": {
-            transform: "scale3d(0.9, 0.9, 0.9)"
-          },
-          "60%": {
-            opacity: "1",
-            transform: "scale3d(1.03, 1.03, 1.03)"
-          },
-          "80%": {
-            transform: "scale3d(0.97, 0.97, 0.97)"
-          },
-          "100%": {
-            opacity: "1",
-            transform: "scale3d(1, 1, 1)"
-          },
+          }
         },
       },
       animation: {
-        'fade-in-bouncedown': 'fade-in-bouncedown 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards',
-        'fly-in': 'fly-in 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) forwards',
+        fadeinbouncedown: 'fade-in-bouncedown 1s ease-in-out 0.25s 1',
+        gradient: 'gradient 8s linear infinite'
       },
-      gridTemplateRows: {
-        'home': '0.1fr 1fr',
-      },
-      gridTemplateColumns: {
-        'card': '1fr 3fr',
-      }
     },
   },
   plugins: [],

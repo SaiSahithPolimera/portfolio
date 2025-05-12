@@ -8,7 +8,7 @@ const Button = ({ link, buttonType, name }) => {
 
     return (
         <a href={link} target="_blank" rel="noreferrer noopener">
-            <button className="flex gap-2 flex-row items-center border-2 p-2 rounded-xl hover:bg-black hover:text-white ease-in duration-150 hover:border-black z-10 cursor-pointer">
+            <button className="flex gap-2 flex-row items-center backdrop-blur-3xl border-stone-800 border-2 p-2 rounded-xl hover:bg-white/20 hover:text-white ease-in duration-150  cursor-pointer">
                 {buttonType && Icons[buttonType.toLowerCase()]}
                 <span>{buttonText}</span>
             </button>
