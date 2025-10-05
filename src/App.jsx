@@ -9,6 +9,7 @@ import Blog from './pages/Blog';
 import BlogPostPage from './pages/BlogPostPage';
 import Notes from './pages/Notes';
 import NoteDetail from './pages/NoteDetail';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               <Route path="/notes/:slug" element={<NoteDetail />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
             </Routes>
+            <Analytics />
           </Suspense>
         </Layout>
       </Router>
